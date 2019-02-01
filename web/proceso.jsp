@@ -1,4 +1,4 @@
-%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="daw.ejemploweb.Cliente" %>
 
 <html>
@@ -7,7 +7,7 @@
         <title>Mostrando los datos</title>
     </head>
     <body>
-        <!-- Se recogen los valores que envÌa el formulario mediante el objeto 	request y su mÈtodo getParameter() -->
+        <!-- Se recogen los valores que env√≠a el formulario mediante el objeto 	request y su m√©todo getParameter() -->
         <%
             Cliente cli;
             String edad = request.getParameter("edad");
@@ -17,15 +17,15 @@
             if (email.equals("") || edad.equals("") || nombre.equals("")) {
         %>
 
-        <!-- Si no se ha introducido alg˙n par·metro se muestra el error
+        <!-- Si no se ha introducido alg√∫n par√°metro se muestra el error
         
-        <center> <h2>Faltan par·metros</h2> </center>
-        <!-- Se han introducido los par·metros, creamos el objeto con los datos -->
+        <center> <h2>Faltan par√°metros</h2> </center>
+        <!-- Se han introducido los par√°metros, creamos el objeto con los datos -->
         <% } else {
             cli = new Cliente(nombre, email, Integer.parseInt(edad));
         %>
         <p>
-            InformaciÛn recogida por el servidor:<br>
+            Informaci√≥n recogida por el servidor:<br>
 
             Edad: <%= cli.getEdad()%> <br>
             Nombre: <%= cli.getNombre()%> <br>
